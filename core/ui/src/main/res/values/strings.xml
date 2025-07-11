@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ATISUTEST</string>
+
+    <!--Errors-->
+    <string name="retry">Повторить</string>
+    <string name="error">Ошибка</string>
+    <string name="error_occurred">Возникла ошибка</string>
+
+    <!-- Race -->
+    <string name="button_title_start">Старт</string>
+    <string name="button_title_restart">Рестарт</string>
+
+    <!-- History -->
+    <string name="item_history_title">Забег №%s</string>
+    <string name="item_history_horse">Лошадь: %s</string>
+    <string name="item_history_date">Дата: %s</string>
+</resources>
