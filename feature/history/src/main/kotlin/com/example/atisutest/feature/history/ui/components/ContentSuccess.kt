@@ -10,11 +10,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.LocalContentColor
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -49,34 +46,25 @@ private fun HistoryEntryItem(
     historyEntry: HistoryEntry,
 ) {
     Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(
-                horizontal = 8.dp,
-                vertical = 8.dp
-            ),
+        modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        CompositionLocalProvider(
-            LocalContentColor provides MaterialTheme.colorScheme.onPrimaryContainer,
-        ) {
-            Column {
-                Text(
-                    text = stringResource(UiKitR.string.item_history_title, historyEntry.id),
-                )
+        Column {
+            Text(
+                text = stringResource(UiKitR.string.item_history_title, historyEntry.id),
+            )
 
-                Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 
-                Text(
-                    text = stringResource(UiKitR.string.item_history_horse, historyEntry.horseName),
-                )
+            Text(
+                text = stringResource(UiKitR.string.item_history_horse, historyEntry.horseName),
+            )
 
-                Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(4.dp))
 
-                Text(
-                    text = stringResource(UiKitR.string.item_history_date, historyEntry.date),
-                )
-            }
+            Text(
+                text = stringResource(UiKitR.string.item_history_date, historyEntry.date),
+            )
         }
     }
 }

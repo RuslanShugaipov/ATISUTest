@@ -37,9 +37,7 @@ internal fun Content(
             is UiState.Error -> {
                 ContentError(
                     message = state.message,
-                    onRetryClicked = {
-                        // TODO
-                    }
+                    onRetryClicked = onRestartClick
                 )
             }
         }

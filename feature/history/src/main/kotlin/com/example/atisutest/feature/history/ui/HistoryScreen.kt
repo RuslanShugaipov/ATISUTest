@@ -17,5 +17,6 @@ internal fun HistoryScreen(
     Content(
         modifier = modifier,
         state = state,
+        onRetryClick = viewModel::loadHistory
     )
 }
